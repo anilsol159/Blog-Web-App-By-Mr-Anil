@@ -7,6 +7,14 @@
 
   <p>Hello, and welcome to my demo blog! This site is designed to showcase a collection of blogs on a wide range of topics. Whether you're looking for tech insights, lifestyle tips, travel stories, or anything in between, you'll find a diverse selection of content here.
   </p>
-  
+  <h4>Here Goes the List of Blogs:- </h4>
+
+  <%if(locals.blogs){%>
+    <ul>
+      <% for(var i=0;i<blogs.length;i++){ %>
+        <li> <%= blogs[i].title %></li>
+      <% } %>
+    </ul>
+  <% } %>
 
   <%- include("partials/footer.ejs") %>
