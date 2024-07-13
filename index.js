@@ -31,9 +31,17 @@ app.get("/create",(req,res) =>{
     res.render("create.ejs")
 });
 
+app.get("/blog/:id",(req,res) => {
+    res.render("blog.ejs",{
+        title: blogList[req.params.id].title,
+        content: blogList[req.params.id].content
+    })
+})
+
 app.post("/submit",(req,res) => {
     console.log(req.body["heading"])
     addBlog({
+        id: blogList.length,
         title: req.body["heading"],
         content: req.body["text"]
     })

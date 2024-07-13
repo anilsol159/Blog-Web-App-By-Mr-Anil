@@ -1,0 +1,13 @@
+<%- include("partials/header.ejs") %>
+<% if(locals.title && locals.content){ %>
+<h1>
+    <%= title %>
+</h1>
+
+<p>
+    <%= content %>
+</p>
+<% } %>
+<br>
+<br>
+<%- include("partials/footer.ejs") %>
