@@ -13,7 +13,9 @@
     <ul>
       <% for(var i=0;i<blogs.length;i++){ %>
         <!-- Add your actions to these list items -->
-        <li> <%= blogs[i].title %></li>
+        <li>
+           <a href="/blog/<%= blogs[i].id %>"> <%= blogs[i].title %> </a> 
+        </li>
       <% } %>
     </ul>
   <% } %>
